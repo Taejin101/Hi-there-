@@ -1,0 +1,245 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.nav
+{
+    background-color: #c700fff7;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#menu
+{
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    width: 50px;
+    background-color: #c700fff7;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    transform: rotate("0deg");
+    transition: transform 1s;
+}
+
+.visible-md
+{
+    display: none;
+}
+
+#menu div
+{
+    display: block;
+    height: 5px;
+    width: 35px;
+    margin: 2px 0px;
+    background-color: rgb(53, 53, 53);
+    border-radius: 5px;
+}
+
+.align-center
+{
+    display: flex;
+    align-items: center;
+}
+
+.brand h1
+{
+    display: inline-block;
+    font-size: 2.2rem;
+}
+
+.brand a
+{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.brand a:active
+{
+    text-decoration: none;
+}
+
+#logo
+{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-image: url("../img/logo.jpeg");
+    background-size: cover;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.container
+{
+    position: relative;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+
+#resume
+{
+    display: block;
+    position: absolute;
+    right: 0px;
+    font-size: 1.4rem;
+}
+
+#resume a
+{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#resume a:hover
+{
+    text-decoration: underline
+}
+
+#main-content
+{
+    display: flex;
+    /* background-color: green; */
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+aside
+{
+    position: fixed;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+aside hr
+{
+    width: 50%;
+    margin: 0 auto; 
+}
+
+#imp-links div
+{
+    height: 40px;
+    width: 40px;
+    /* background-color: red; */
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+}
+
+#imp-links div:hover
+{
+    filter: invert(100%);
+}
+
+#github
+{
+    background-image: url('../img/github.png');
+}
+#linkedin
+{
+    background-image: url('../img/linkedin.png');
+}
+#insta
+{
+    background-image: url('../img/insta.png');
+}
+
+#main-content .container
+{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: yellow; */
+}
+
+#hey
+{
+    width: 100px;
+    height: 100px;
+    font-family: 'Kalam', cursive;
+    text-align: center;
+    font-size: 2rem;
+    transform: rotate(15deg);
+    position: relative;
+    left: 144px;
+    top: 118px;
+    line-height: 40px;
+}
+
+/* @media only screen and (max-width:990px) {
+    aside
+    {
+        display: none;
+        position: fixed;
+        bottom: 0;
+    }
+} */
+
+
+@media only screen and (max-width:768px) {
+    .visible-md
+    {
+        display: block;
+    }
+    
+    .nav hr
+    {
+        display: none;
+        width: 100%;
+        background-color: black;
+        margin: 20px 0;
+    }
+    .icon
+    {
+        position: absolute;
+        right: 0px;
+        background-color: #c700fff7;
+        border: 0px;
+    }
+    .container
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #resume
+    {
+        position: static;
+        display: none;
+    }
+}
+
+#welcome
+{
+    height: 400px;
+    width: 100%;
+    /* background-color: blue; */
+    background-image: url("../img/welcome.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#name
+{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+}

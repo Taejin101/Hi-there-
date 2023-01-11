@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>My HomePage</title>
+</head>
+<body>
+  <nav class="nav">
+      <div class="container">
+          <div class="brand">
+            <a href="index.html" >
+              <div class="align-center">
+                <div id="logo"></div>
+                <h1> Ishan Joshi </h1>
+              </div>
+            </a>
+          </div>
+          
+          <hr class="toggle">
+          <div id="resume" class="toggle">
+              <a href="./static/Resume.pdf" target="_blank"><h3>My Resume</h3></a>
+          </div>
+
+          <button tabindex="-1" class="visible-md icon">
+            <div id = "menu">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </button>
+        </div>
+  </nav>
+
+  <section id="main-content">
+    <aside id="imp-links">
+      <div title="github" id="github">
+        <a href="https://github.com/Taejin101">
+          <div>
+             <!-- git image  -->
+          </div>
+        </a>
+      </div>
+      <hr>
+      <div title="linkedin" id="linkedin">
+        <a href="https://github.com/Taejin101">
+          <div>
+            <!-- linkedin image -->
+          </div>
+        </a>
+      </div>
+      <hr>
+      <div title="insta" id="insta">
+        <a href="https://github.com/Taejin101">
+          <div>
+            <!-- git image -->
+          </div>
+        </a>
+      </div>
+    </aside>
+    <div class="container">
+      <span id="hey">Hi there!</span>
+      <div id="welcome"></div>
+      <h1 id="name">I am Ishan</h1>
+    </div>
+  </section>
+  
+  <script>
+    function openClose()
+    {
+      x = document.querySelector("#menu")
+      if(x.style.transform === "rotateY(180deg)")
+      {
+        x.style.transform = "rotateY(0deg)";
+      }
+      else
+      {
+        x.style.transform = "rotateY(180deg)";
+      }
+      toggle = document.querySelectorAll(".toggle");
+      toggle.forEach(element => {
+        if(element.style.display === "block")
+        {
+          element.style.display = "none";
+        }
+        else
+        {
+          element.style.display = "block";
+        }
+      });
+    }
+    function close()
+    {
+      toggle = document.querySelectorAll(".toggle");
+      toggle.forEach(element => {
+        if(element.style.display === "block")
+        {
+          element.style.display = "none";
+        }
+      });
+    }
+    d = document.querySelector(".icon");
+    d.addEventListener("click", openClose);
+    d.addEventListener("blur", close);
+  </script>
+</body>
+</html>
